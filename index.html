@@ -89,6 +89,66 @@
 
 
 
+
+
+<style>
+  /* Your CSS code */
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .image-container {
+      grid-template-columns: 1fr; /* Stack on mobile */
+    }
+  }
+
+
+  .video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  iframe {
+    width: 90%;
+    height: auto;
+    max-width: 560px; /* Setting max width */
+    aspect-ratio: 16/9; /* Ensures correct aspect ratio */
+  }
+
+  @media (max-width: 768px) {
+    iframe {
+      width: 100%;  /* Full width on smaller screens */
+      height: auto;
+      max-height: 220px;  /* Adjusted height for mobile */
+    }
+  }
+
+
+  html {
+    scroll-padding-top: 200px; /* Adjust this value as needed */
+  }
+</style>
+
+
+
+
+
+
   <title>Daniele Battesimo Provenzano</title>
 
 </head>
@@ -245,7 +305,7 @@
     
     <h1><center>About</center></h1>
 
-    <p align="justify"> I am a PhD student in Physics at the Scuola Normale Superiore in Pisa, Italy, where I conduct theoretical research on plasmonics and anisotropic metamaterials. However, my true passion is teaching, which dates back to my bachelor's years. Since then, I have taught various courses aimed at talented high school students involved in the Physics Olympiad, as well as university freshmen. I also enjoy writing educational materials and articles that challenge misconceptions and debunk common myths found in traditional sources. I plan to write several textbooks on Classical Physics, <span style="color:Tomato">one</span> of which is already in progress. I aspire to become a lecturer and dedicate my life to Physics education.</p>
+    <p align="justify"> I am a PhD student in Physics at the Scuola Normale Superiore in Pisa, Italy, where I conduct theoretical research on plasmonics and anisotropic metamaterials. However, my true passion is teaching, which dates back to my bachelor's years. Since then, I have taught various courses aimed at talented high school students involved in the Physics Olympiad, as well as university freshmen. I also enjoy writing educational materials and articles that challenge misconceptions and debunk common myths found in traditional sources. I plan to write several textbooks on Classical Physics, <a href="#textbook-progress" style="color:blue;">one</a> of which is already in progress. I aspire to become a lecturer and dedicate my life to Physics education.</p>
 
 
 
@@ -396,7 +456,7 @@
   
     <div class="col-12 col-lg-4 section-heading">
       <h1><center>Teaching</center></h1>
-      <br>
+      
       <p align="justify" style="margin-top: 5px;"> <!-- Increased top margin -->
         During my years as a university student and PhD candidate, I developed a deep passion for teaching physics. I began teaching immediately after earning my bachelor's degree, and it has since become an indispensable part of my life. I take inspiration from influential educators such as <a href="https://davidmorin.physics.fas.harvard.edu/" target="_blank">David Morin</a>, <a href="http://kirkmcd.princeton.edu/" target="_blank">Kirk McDonald</a>, <a href="https://www.reed.edu/physics/faculty/wheeler/" target="_blank">Nicholas Wheeler</a>, <b>Michael Spivak</b> and <b>Giuseppe la Rocca</b>, my professor at Scuola Normale Superiore. Here, you can find a collection of notes and exercises I have written over the past six years.
         </p>      
@@ -426,9 +486,14 @@
             <br>
 
             <li><b> University Orientation Courses (June - July 2024) </b> </li> 
+          <!-- 
+           <div style="float: right; margin-left: 20px; margin-bottom: 10px; margin-top: 10px;">
+              <img src="/files/folks.png" alt="" width="200" height="114" style="object-fit: cover;">
+            </div>
+            -->
             <p align="justify" style="margin-top: 5px;">
-              These are slides I prepared for three university orientation courses organized by SNS, aimed at 260 handpicked high school students in their final years. The lessons focused on simple problem-solving techniques and everyday situations.  <a href="/files/slides.pdf" target="_blank"> Slides (ITA)</a> / <a href="/files/slides_eng.pdf" target="_blank">Slides (ENG)</a>
-             </p>
+              These are slides I prepared for three university orientation courses organized by SNS, aimed at 260 handpicked high school students in their final years. The lessons focused on simple problem-solving techniques and everyday situations.  <a href="/files/slides.pdf" target="_blank"> Slides (ITA)</a> / <a href="/files/slides_eng.pdf" target="_blank">Slides (ENG)</a></p>
+
 
            <li><b> Classical Mechanics and Thermodynamics </b> 
            <p align="justify" style="margin-top: 5px;"> 
@@ -447,10 +512,10 @@
     This course, also known as Pre-IPhO, is the final challenge for Italian students aiming to qualify for international competitions, i.e. IPhO and EuPhO. After several days of theoretical and experimental training, the winners of the national competition face a final exam to select the two Italian teams. Although the exam problems will never be published, my handouts from recent years are provided below.
   </p>
         <ul>
-            <li><a href="https://stagefisica.sns.it/media/lezioni/public/fluido_hwyX1y9.pdf" target="_blank">Celestial Mechanics (ITA)</a> / <span style="color:Tomato">ENG</span></li>
-            <li><a href="https://stagefisica.sns.it/media/lezioni/public/meccanica_celeste.pdf" target="_blank">Elecromagnetism (ITA)</a> / <span style="color:Tomato">ENG</span></li>
-            <li><a href="https://stagefisica.sns.it/media/lezioni_2021_I/37_Meccanica_celeste.pdf" target="_blank">Thermodynamics (ITA)</a> / <span style="color:Tomato">ENG</span></li>
-            <li><a href="https://stagefisica.sns.it/media/lezioni_2022_I/53_Miscellanea.pdf" target="_blank">Miscellanea (ITA)</a> / <span style="color:Tomato">ENG</span></li>
+            <li><span style="color:Tomato"> Celestial Mechanics (ITA)</span> / <span style="color:Tomato">ENG</span></li>
+            <li><span style="color:Tomato"> Electromagnetism (ITA)</span> / <span style="color:Tomato">ENG</span></li>
+            <li><span style="color:Tomato"> Thermodynamics (ITA)</span> / <span style="color:Tomato">ENG</span></li>
+            <li><span style="color:Tomato"> Miscellanea (ITA)</span> / <span style="color:Tomato">ENG</span></li>
         </ul>
     <br>
 
@@ -462,7 +527,7 @@
     
       <ul>
         <li><a href="/files/Sigillo_2024.pdf" target="_blank">Estimation Problems and Dimensional Analysis (ITA)</a> / <span style="color:Tomato">ENG</span></li>
-        <li><a href="/files/Sigillo_2024.pdf" target="_blank">Celestial Mechanics (ITA)</a> / <span style="color:Tomato">ENG</span></li>
+        <li><span style="color:Tomato"> Celestial Mechanics (ITA)</span> / <span style="color:Tomato">ENG</span></li>
       </ul> 
 
   </ul>    
@@ -474,17 +539,12 @@
   <ul>
   <li><b>Training Camp for the Physics Olympiad</b> </li> 
   <p align="justify" style="margin-top: 5px;"> 
-     Below are the handouts I wrote for the physics school organized by SSC. For now, they are all written in Italian, but I plan to translate them into English.
-  </p>     
+     Below are the handouts I wrote for the physics school organized by SSC. For now, they are all written in Italian, but I plan to translate them into English. <span style="color:Tomato">Here</span> are the final exams from recent years.</p>     
         <ul>
          <li><a href="/files/Elettrostatica_SSC_2023.pdf" target="_blank">Electrostatics - 2023 (ITA)</a> / <span style="color:Tomato">ENG</span> </li>
          <li><a href="/files/Problem_Solving_SSC_2024.pdf" target="_blank">Problem Solving - 2024 (ITA)</a> / <span style="color:Tomato">ENG</span>  &#10230; <a href="/files/Tecniche_di_Problem_Solving_in_Fisica.pdf" target="_blank">Improved version (ITA)</a></li>
          <li><a href="/files/Fluido_SSC.pdf" target="_blank">Fluid Dynamics - 2025 (ITA)</a> / <span style="color:Tomato">ENG</span></li>
        </ul>
-
-       <p align="justify" style="margin-top: 5px;"> 
-        <span style="color:Tomato">Invece, qui ci sono i testi delle prove finali degli ultimi anni.</span> 
-       </p> 
 
     <!--
     <li><b>“Training Camp for the Math Olympiad”</b> <span style="color:Tomato"> (TROVARE I PROBLEMI)</span>  </li> 
@@ -547,9 +607,9 @@
       
 
 
-      <div class="card-simple">
-        <h3 class="article-title mb-1 mt-3" style="color: blue; margin-bottom: 20px;"> <!-- Increased bottom margin -->
-          <a href="/files/Cover.png" style="color: royalblue;">
+      <div class="card-simple" id="textbook-progress">
+        <h3 class="article-title mb-1 mt-3" style="color: blue; margin-bottom: 20px;"> 
+           <a href="/files/Cover.png" style="color: royalblue;">
             <center>“Problem-Solving Techniques in Physics, with Original Problems and Debunked Myths” </center>
           </a>
         </h3>
@@ -567,11 +627,11 @@
         </h3>
         
         <div class="article-style">
-          <p align="justify" style="margin-top: 15px; margin-bottom: 5px;"> 
+          <p align="justify" style="margin-top: 15px; margin-bottom: 15px;"> 
             Since 2018, a dedicated group of physics students from Scuola Normale Superiore has been organizing an annual one-week physics school for 24 handpicked Italian high school students. The aim is to prepare them for the Physics Olympiad while providing an introduction to bachelor studies, both in the classroom and the laboratory. Lecture notes and recordings are available on the website, in Italian. In 2019, the project received the prize "Didactics of Physics", presented annually by the Italian Society of Physics. This project has been extremely important to me, as I met many people I care about. Almost all the students I have had hold a special place in my heart.
           </p>
         </div>
-      
+          <!--
         <div class="article-style" style="display: flex; justify-content: center; gap: 1px; align-items: center; margin-top: -10px; margin-bottom: 5px;">
           <img src="/files/scalinata.jpg" alt="" class="img-fluid img-rounded" width="280" height="208" style="object-fit: cover;">
           <img src="/files/lab.jpg" alt="" class="img-fluid img-rounded" width="380" height="270" style="object-fit: cover;">
@@ -581,6 +641,17 @@
           <img src="/files/cusu.jpg" alt="" class="img-fluid img-rounded" width="360" height="218" style="object-fit: cover;">
           <img src="/files/aula.jpg" alt="" class="img-fluid img-rounded" width="300" height="270" style="object-fit: cover;">
         </div>
+         -->
+
+
+        <div class="image-container" style="margin-bottom: 20px;">
+          <img src="/files/scalinata.jpg" alt="Scalinata" class="img-fluid img-rounded">
+          <img src="/files/aula.jpg" alt="Aula" class="img-fluid img-rounded">
+          <img src="/files/lab.jpg" alt="Lab" class="img-fluid img-rounded">
+          <img src="/files/cusu.jpg" alt="Cusu" class="img-fluid img-rounded">
+        </div>
+
+
       </div>
 
 
@@ -592,10 +663,10 @@
     <a href="https://www.olifis.it/" style="color: royalblue;"><center>Italian Physics Olympiad</center> </a>
   </h3>
   <div class="article-style">
-    <p align="justify" style="margin-top: 15px;"> <!-- Increased top margin -->
+    <p align="justify" style="margin-top: 15px;"> 
       The Italian Physics Olympiad has been organized since 1987 by the Italian Association for the Teaching of Physics (AIF). Each year, two teams composed of the best Italian students are trained in preparation for IPhO and EuPhO. In 2019, I joined the training courses organized by AIF as a trainer. After five years of collaboration, I earned a spot on the national committee that organizes the Olympiad. Our main tasks include creating theoretical and experimental problems for the multiple stages of the competition and evaluating the participants.
     </p>
-    <div style="display: flex; justify-content: center; margin-top: -35px;"> <!-- Reduced top margin -->
+    <div style="display: flex; justify-content: center; margin-top: -35px;margin-bottom: -10px;"> 
       <img src="/files/stageSSC.JPG" alt="" width="400" height="288">
     </div>
   </div>
@@ -608,14 +679,21 @@
           <a href="https://gas.olifis.it/" style="color: royalblue;"> <center>Team Physics Competition</center></a>
         </h3>
         <div class="article-style" style="text-align: center;"> 
-          <p align="justify" style="margin-top: 15px;"> <!-- Increased top margin -->
+          <p align="justify" style="margin-top: 15px;">
             In 2023, after four years of preparation, my university colleagues and I gave birth to the first-ever Physics Team Competition, an annual event consisting of several stages held all across Italy and aimed at high school students. Every year, approximately 600 teams from all corners of Italy participate in the competition. The top 20 teams receive an invitation to the national finals, where the competition unfolds in person, resembling a sporting event. Here is the time-lapse of the 2024 final, can you spot the Easter egg?
           </p>
-          <iframe width="350" height="224" src="https://www.youtube.com/embed/lDx7oTnbz4E?si=DpDSFaIC6OdFhMxC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           
+          <div class="video-container">
+            <iframe width="500" height="281" src="https://www.youtube.com/embed/lDx7oTnbz4E?si=DpDSFaIC6OdFhMxC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
           <p align="justify" style="margin-top: 15px;">
             Here is a funny problem I created for the 2025 contest: <i>  "Captain Hector Barbossa has a special spyglass made up of two thin converging lenses aligned along the same axis. The peculiarity of his instrument is that the magnification does not depend on the distance from the observed object. If the two lenses are separated by 7 cm and the focal length of the lens closest to the eyes is 6.2 cm, what is the magnification of the spyglass?"</i>
           </p>
+
+
+         
+
 
         </div>
     
@@ -668,7 +746,7 @@
       <div class="col-12 col-lg-4 section-heading">
       <h1><center>My Suggestions</center></h1>
 
-      <p align="justify"><span style="color:Tomato">Motivazioni (Gare di Fisica, Ungheria), back story sul tardo arrivo alle olimpiadi, mettere i consigli per le Olimpiadi e per l'UNI, mettere i link alle competizioni e ai siti buoni, mettere le foto delle InterENS, del calcetto, della band e dei cani.</span> </p>
+      <p align="justify"><span style="color:Tomato">Motivazioni (Gare di Fisica, Ungheria), back story sul tardo arrivo alle olimpiadi, mettere i consigli per le Olimpiadi e per l'UNI, mettere i link alle competizioni e ai siti buoni.</span> </p>
               
       </div>
 
@@ -676,19 +754,10 @@
       
         <h3 id="advice">Physics Olympiad</h3>
 
-        <ul>
-        <li><a href="/writing/Advice.pdf" target="_blank">Learning Introductory Physics</a>. A FAQ for high school students who want to start learning physics or taking part in physics competitions, such as the USAPhO.</li>
-        <li><a href="/writing/AdviceAfter.pdf" target="_blank">After Introductory Physics</a>. Some tips for self-taught students on what to do after mastering the basics, including book recommendations and online resources.</li>
-       </ul>
-
-          <h3 id="expository">Competing at University</h3>
+       <h3 id="expository">Competing at University</h3>
   
           The proliferation and growth of physics competitions have led to an overall increase in the skill level of the top-performing participants. Today, there are countless young students capable of solving extremely challenging problems. However, while the number of people able to solve problems of a certain difficulty continues to rise, the same cannot be said for the ability to create (original) problems. One possible reason is that most of the problems available have already been proposed. A second reason, in my opinion, is the lack of creativity driven by the abundance of accessible resources. There are countless collections of problems spanning all difficulty levels, readily available to anyone with just a click. Beyond Physics, this issue reflects a broader phenomenon affecting every aspect of our lives: today, we no longer have the opportunity to experience boredom!
           At least in my case, the boredom I felt as a child often made me think, daydream, and it was there that my creativity was born. If it weren’t for boredom, I would have never developed the creativity needed to craft original physics problems or to navigate life’s challenges with ease. Creativity is essential for pushing the boundaries of our understanding of the universe. Science often demands solutions based on alternative approaches that diverge completely from standard methods.
-          <ul>
-          <li><a href="https://arxiv.org/abs/2411.08283" target="_blank">The Surprising Subtlety of Electrostatic Field Lines</a>. A fun puzzle in electrostatics and its resolution with differential geometry; coauthored with <a href="https://sites.google.com/site/braunercz/home" target="_blank">Tomas Brauner</a>.</li>
-          <li><a href="/writing/Dissertation.pdf" target="_blank">Novel Searches for Physics Beyond the Standard Model</a>. My Stanford PhD dissertation, covering several new types of experimental searches, and their motivation.</li>
-          </ul>
 
           <h3 id="links">Links</h3>
 
@@ -724,18 +793,23 @@
     <div class="col-12 col-lg-4 section-heading">
       <h1> <a href="https://www.youtube.com/watch?v=tnC-75lR3S8" target="_blank"><center>“And now for something completely different”</center>  </a></h1>
       
+      <p align="justify"><span style="color:Tomato">Mettere le foto delle InterENS, del calcetto, della band e dei cani.</span> </p>
+       
     </div>
     <div class="col-12 col-lg-8">
       
       <ul>
        
         <li>
-          <div style="float: right; margin-left: 20px; margin-bottom: 10px; margin-top: 10px;">
-            <img src="/files/thegoat.png" alt="" width="260" height="114" style="object-fit: cover;">
-          </div>
           <p align="justify">
-            Me and my sister grew up in the countryside, surrounded by goats, pigs, chickens and rabbits. My maternal grandparents were farmers, and during elementary and middle school, I loved helping them in their vegetable garden, while my sister used to take care of bunnies and kittens (she is now a vet). My relatives taught me how to hoe, harvest crops, and, most importantly, be self-sufficient. I never learned to drive the tractor, but I did know how to ride pigs! Here is my 3-and-a-half-year-old self, grooming his humble steed, preparing it for battle against the monsters of his imagination. Back then, I had much more hair than I do now &#128561. <br> 
-            After building a treehouse and endless wooden soccer goals with my friends, I became interested in DIY. Now, besides gardening and chopping wood, I really enjoy tackling household issues, especially plumbing problems. In 2023, I almost got electrocuted after successfully fixing the motor of the washing machine. These are the risks of the trade!
+            Me and my sister grew up in the countryside, surrounded by goats, pigs, chickens and rabbits. My maternal grandparents were farmers, and during elementary and middle school, I loved helping them in their vegetable garden, while my sister used to take care of bunnies and kittens (she is now a vet). My relatives taught me how to hoe, harvest crops, and, most importantly, be self-sufficient. I never learned to drive the tractor, but I did know how to ride pigs! Here is my 3-and-a-half-year-old self, grooming his humble steed, preparing it for battle against the monsters of his imagination. Back then, I had much more hair than I do now &#128561. </p>
+           
+            <div style="display: flex; justify-content: center; margin-bottom: 20px; margin-top: -8px;">
+              <img src="/files/thegoat.png" alt="" width="300" height="288">
+              </div>
+
+           <p align="justify">
+            After building a treehouse and endless wooden soccer goals with my friends, I became interested in DIY. Now, besides gardening, climbing trees and chopping wood, I really enjoy tackling household issues, especially plumbing problems. In 2023, I almost got electrocuted after successfully fixing the motor of the washing machine. These are the risks of the trade!
           </p>
         </li>
          
@@ -749,7 +823,7 @@
         <li><p align="justify">During university, I developed interests beyond Physics and teaching. Inspired by Monty Python's cheerful insanity, I discovered a passion for creating and editing absurd short films. You can find a couple on my <a href="https://www.youtube.com/@DanieleBattesimoProvenzano" target="_blank">YouTube channel</a>. I have many more ideas that never came to life—the main challenge being that my friends are not willing to act!</p></li>
 
       <div style="text-align: center;">
-        <iframe width="500" height="283" src="https://www.youtube.com/embed/HePARFeWX_w?si=evp7goKzHbxF6aqV" 
+        <iframe width="330" height="210" src="https://www.youtube.com/embed/HePARFeWX_w?si=evp7goKzHbxF6aqV" 
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
@@ -767,11 +841,6 @@
     <li> <p align="justify"> When it comes to sports, my choices are quite ordinary. I regularly go for runs and play soccer quite often, even as a goalkeeper. I learned to play with my neighborhood friends during my adolescence, on a dirt field we maintained ourselves. Some of us (including me) ended up in the hospital a couple of times, with broken arms and scalp injuries. Each time, our lovely moms were furious and ready to give us a piece of their mind. <br>
 
     Watching snooker on TV, I became interested in the world of billiards. I love playing 8-ball and 9-ball, but I still haven’t mastered sidespin. </p></li>
-
-    <div style="display: flex; justify-content: center;">
-    <img src="/files/movies.png" alt="" width="500" height="288">
-    </div>
-    <br>
 
 
     </ul> 
@@ -831,11 +900,11 @@
   
 
   <p class="powered-by">
-    &copy; 2024 &middot; 
+    &copy; 2025 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. This website is <b>highly</b> inspired by <a href="https://knzhou.github.io/" target="_blank">Kevin Zhou</a>'s.
 
     
     <span class="float-right" aria-hidden="true">
@@ -877,6 +946,27 @@
     </div>
   </div>
 </div>
+
+<script>
+  // Check if there's a hash in the URL (which indicates an anchor link)
+  if (window.location.hash) {
+      // If it’s the page load, prevent the default jump behavior of the anchor link
+      history.pushState("", document.title, window.location.pathname);
+  }
+
+  // Add an event listener to only scroll when the link is clicked
+  document.getElementById("oneLink").addEventListener("click", function (event) {
+      setTimeout(function () {
+          // Adjust scroll position when clicking the link, if needed
+          window.scrollTo({
+              top: document.getElementById("textbook-progress").offsetTop - 50, // Adjust the 50px offset
+              behavior: "smooth"
+          });
+      }, 50);
+  });
+</script>
+
+
 
 </body>
 </html>
