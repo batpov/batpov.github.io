@@ -7,4 +7,4 @@ window.MathJax = {
   },
   TeX: {noUndefined: {attributes: {mathcolor: 'red', mathbackground: '#FFEEEE', mathsize: '90%'}}},
   messageStyle: 'none'
-};
+}; 

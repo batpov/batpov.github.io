@@ -8,7 +8,7 @@
  * 2. Notes window responds with 'connected' when it is available
  * 3. This window proceeds to send the current presentation state
  *    to the notes window
- */
+ */ 
 var RevealNotes = (function() {
 
   var notesPopup = null;

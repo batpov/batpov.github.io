@@ -12,7 +12,7 @@
 *.cb2
 .*.lb
 
-## Intermediate documents:
+## Intermediate documents: 
 *.dvi
 *.xdv
 *-converted-to.*
