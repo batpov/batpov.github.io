@@ -3,67 +3,87 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://batpov.github.io/</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/CV.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/Tecniche_di_Problem_Solving_in_Fisica.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/analogie2025.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/slides.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/slides_eng.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/CM&amp;Th2021.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://batpov.github.io/files/Sigillo-Stime.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<loc>https://batpov.github.io/files/Problemi%20di%20Stima.pdf</loc>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://batpov.github.io/files/Sigillo-DimAnal.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<loc>https://batpov.github.io/files/Estimation%20Problems.pdf</loc>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://batpov.github.io/files/Sigillo-MecOrb.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<loc>https://batpov.github.io/files/Analisi%20Dimensionale.pdf</loc>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://batpov.github.io/files/Dimensional%20Analysis.pdf</loc>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://batpov.github.io/files/Meccanica%20Orbitale.pdf</loc>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://batpov.github.io/files/Orbital%20Mechanics.pdf</loc>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/Elettrostatica_SSC_2023.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/Problem_Solving_SSC_2024.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://batpov.github.io/files/Fluido_SSC.pdf</loc>
-	<lastmod>2025-04-04T11:55:34+01:00</lastmod>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://batpov.github.io/files/Suggestions.pdf</loc>
+	<lastmod>2025-04-27T00:15:49+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>
