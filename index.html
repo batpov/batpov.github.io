@@ -150,7 +150,33 @@
   html {
     scroll-padding-top: 200px; /* Adjust this value as needed */
   }
+
+
+  @keyframes lampeggia {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+
+  @keyframes luccica {
+    0% { background-position: 0 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .scritta-luccicante {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    animation: lampeggia 1s infinite, luccica 3s linear infinite;
+    background: linear-gradient(90deg, blue, red, black, red, blue);
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 </style>
+
 
 
   <title>Daniele Battesimo Provenzano</title>
@@ -361,20 +387,25 @@
   
     
       <p align="justify"> &nbsp;&nbsp; Since my master's studies, I have been particularly interested in macroscopic electrodynamics, with a focus on the   propagation of electromagnetic waves in anisotropic media. At the same time, having remained closely connected to the world of the Physics Olympiads—which I attended during high school—I began teaching in three schools dedicated to talented students, preparing them for national and international competitions (IPhO and EuPhO).
-        Over six years of teaching, and through my involvement as a member of the organizing board of both the Italian Physics Olympiad and the Team Physics Competition, I developed a strong passion for creating original educational materials. The need to design new problems for competitions eventually led several of them to evolve into the foundations for scientific articles.
-        Currently, I am working on several projects in two fields that I particularly love: celestial mechanics and fluid dynamics. As an example, in addition to my Ph.D. research, I am currently pursuing a study on the deflation of soap bubbles, which served as the theoretical basis for the final experimental examination of the 2025 Italian Physics Olympiad. <a href="/files/Laide_e_corrotte.pdf" target="_blank">Here</a> you can find the slides from a presentation I gave in Leiden, concerning misconceptions about Bernoulli's equation. </p>
-       
+        Over six years of teaching, and through my involvement as a member of the organizing board of both the Italian Physics Olympiad and the Team Physics Competition, I developed a strong passion for creating original educational materials. The need to design new problems for competitions eventually led several of them to evolve into the foundations for scientific articles.       
+        
+        <p align="justify">  &nbsp;&nbsp; Through teaching, I was able to address several theoretical gaps accumulated over time, and I also developed a strong appreciation for the experimental aspects of physics. I am committed to continuing in this field, with the aim of promoting my vision of physics education both by teaching and by authoring textbooks. </p>
 
-              <figure>
-               <video width="640" height="360" controls>
-               <source src="/files/DeflatingBubble.mp4" type="video/mp4">
-              </video>
-               <figcaption>This is a simulation illustrating the deflation process of a soap bubble through a cylindrical straw, for three different values of the straw's length. The simulation was created by my lifelong friend <a href="https://acilione.github.io/" target="_blank">Antonino Cilione</a>.</figcaption>
-              </figure>
+       <p align="justify">  &nbsp;&nbsp;  Currently, I am working on several projects in two fields that I particularly love: celestial mechanics and fluid dynamics. As an example, in addition to my Ph.D. research, I am currently pursuing a study on the deflation of soap bubbles, which served as the theoretical basis for the final experimental examination of the 2025 Italian Physics Olympiad.</p>
 
-       
-            <p align="justify">  &nbsp;&nbsp; Through teaching, I was able to address several theoretical gaps accumulated over time, and I also developed a strong appreciation for the experimental aspects of physics. I am committed to continuing in this field, with the aim of promoting my vision of physics education both by teaching and by authoring textbooks. </p>
+        <figure>
+          <video width="640" height="360" controls>
+          <source src="/files/DeflatingBubble.mp4" type="video/mp4">
+        </video>
+          <figcaption>This is a simulation illustrating the deflation process of a soap bubble through a cylindrical straw, for three different values of the straw's length. The simulation was created by my lifelong friend <a href="https://acilione.github.io/" target="_blank">Antonino Cilione</a>.</figcaption>
+        </figure>
+  
+            <div class="scritta-luccicante"> 
+            Bernoulli's Misconceptions
+            </div>
 
+
+            <p align="justify"> <a href="/files/Bernoulli's Misconceptions.pdf" target="_blank"><strong>Here</strong></a> you can find the slides from a presentation I've just given in Leiden, concerning misconceptions about Bernoulli's equation (I suggest using Adobe Acrobat). I am also writing a paper about Bernoulli's equation and its misconceptions, which I will share as soon as it is published.</p>
            </div>
          </div>
 
