@@ -175,6 +175,25 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .responsive-video {
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* o la dimensione che vuoi */
+  display: block;
+  margin: 0 auto;
+}
+
+.caption-wider {
+  max-width: 560px; /* 1.3 × 400px */
+  margin: 10px auto 0 auto;
+  text-align: center;
+  font-size: 0.76em;
+  text-align: justify; 
+  text-align-last: center;
+  line-height: 1.4;
+}
+
 </style>
 
 
@@ -372,13 +391,14 @@
             <div class="col-12 col-lg-4 section-heading">
               <h1><center>Interests</center></h1>
 
-              <p align="justify"><span style="color:Tomato">
-                (Still in the pipeline, waiting for the plumber)</span>
-              </p>
+          <div style="display: flex; justify-content: center;">
+          <p style="text-align: justify; color: Tomato; max-width: 600px;">
+            (Still in the pipeline, waiting for the plumber)
+          </p>
+          </div>
 
               <!-- 
-              <p align="justify"><span style="color:Tomato">Parlare degli interessi della ricerca in EM, della ricerca in didattica, Inspirators (Kirk McDonald, as well as the brilliant Hungarian professors who organize numerous physics competitions in their country), accompagnamento IPhO, GaS (Motivazioni, EuPhO) </span></p>       
-             
+              <p align="justify"><span style="color:Tomato">Parlare degli interessi della ricerca in EM, della ricerca in didattica, Inspirators    
                -->
 
                </div>
@@ -391,21 +411,19 @@
         
         <p align="justify">  &nbsp;&nbsp; Through teaching, I was able to address several theoretical gaps accumulated over time, and I also developed a strong appreciation for the experimental aspects of physics. I am committed to continuing in this field, with the aim of promoting my vision of physics education both by teaching and by authoring textbooks. </p>
 
-       <p align="justify">  &nbsp;&nbsp;  Currently, I am working on several projects in two fields that I particularly love: celestial mechanics and fluid dynamics. As an example, in addition to my Ph.D. research, I am currently pursuing a study on the deflation of soap bubbles, which served as the theoretical basis for the final experimental examination of the 2025 Italian Physics Olympiad.</p>
+       <p align="justify">  &nbsp;&nbsp;  Currently, in addition to my Ph.D. research, I am working on four projects in two fields that I particularly love: celestial mechanics and fluid dynamics. I can only share the <a href="/files/bubbles.pdf" target="_blank"><strong>preprint version</strong></a> of one of them, which is going to be pubblished on the <a href="https://pubs.aip.org/aapt/ajp" target="_blank">AJP</a>. It served as the theoretical basis for the final experimental examination of the 2025 Italian Physics Olympiad.</p>
 
-        <figure>
-          <video width="640" height="360" controls>
-          <source src="/files/DeflatingBubble.mp4" type="video/mp4">
-        </video>
-          <figcaption>This is a simulation illustrating the deflation process of a soap bubble through a cylindrical straw, for three different values of the straw's length. The simulation was created by my lifelong friend <a href="https://acilione.github.io/" target="_blank">Antonino Cilione</a>.</figcaption>
+
+          <figure>
+          <video class="responsive-video" controls>
+            <source src="/files/DeflatingBubble.mp4" type="video/mp4">
+          </video>
+          <figcaption class="caption-wider">
+            This is a simulation illustrating the deflation process of a soap bubble through a cylindrical straw, for three different values of the straw's length. The simulation was created by my lifelong friend 
+            <a href="https://acilione.github.io/" target="_blank">Antonino Cilione</a>.
+          </figcaption>
         </figure>
-  
-            <div class="scritta-luccicante"> 
-            Bernoulli's Misconceptions
-            </div>
 
-
-            <p align="justify"> <a href="/files/Bernoulli's Misconceptions.pdf" target="_blank"><strong>Here</strong></a> are the slides from a presentation I gave in Leiden on misconceptions about Bernoulli’s equation (I recommend using Adobe Acrobat to view them). The content is based on the <a href="/files/Fluido_SSC.pdf" target="_blank"><strong>lecture notes</strong></a> I wrote for the Physics School in Catania (if you want to translate them, I can share the LaTeX source files). I’m also working on a review paper on Bernoulli’s equation and its misconceptions, which I will share as soon as it is published.</p>
            </div>
          </div>
 
@@ -767,9 +785,11 @@
       <div class="col-12 col-lg-4 section-heading">
       <h1><center>Suggestions</center></h1>
 
-      <p align="justify"><span style="color:Tomato">
-        (Still in the pipeline, waiting for the plumber)</span>
-      </p>
+        <div style="display: flex; justify-content: center;">
+          <p style="text-align: justify; color: Tomato; max-width: 600px;">
+            (Still in the pipeline, waiting for the plumber)
+          </p>
+        </div>
 
       <!--
       <p align="justify"><span style="color:Tomato">Motivazioni (Gare di Fisica, Ungheria), mettere i consigli per le Olimpiadi e per l'UNI, mettere i link alle competizioni e ai siti buoni.</span> </p>
@@ -818,8 +838,14 @@
           
        </ul>
 
-       </div>
-    
+            <div class="scritta-luccicante"> 
+            Bernoulli's Misconceptions
+            </div>
+
+
+            <p align="justify"> <a href="/files/Bernoulli's Misconceptions.pdf" target="_blank"><strong>Here</strong></a> are the slides from a presentation I gave in Leiden on misconceptions about Bernoulli’s equation (I recommend using Adobe Acrobat to view them). The content is based on the <a href="/files/Fluido_SSC.pdf" target="_blank"><strong>lecture notes</strong></a> I wrote for the Physics School in Catania. I am also working on a review paper on Bernoulli’s equation and its misconceptions, which I will share as soon as it is published.</p>
+
+     </div>
    
       </div>
       <br>
