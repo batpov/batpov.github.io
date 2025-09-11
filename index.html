@@ -194,6 +194,33 @@
   line-height: 1.4;
 }
 
+
+  .custom-image-grid {
+    display: grid;
+    gap: 20px;              /* spazio tra le immagini */
+  }
+
+  .custom-image-grid img {
+    width: 100%;
+    height: auto;
+    margin: 0px; /* rimuove margini verticali bianchi */
+  }
+
+  /* Desktop: 2 colonne sopra + 1 immagine centrata sotto */
+  @media (min-width: 768px) {
+    .custom-image-grid {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+    .custom-image-grid img:nth-child(3) {
+      grid-column: 1 / -1;     /* la terza occupa entrambe le colonne */
+      justify-self: center;     /* centrata orizzontalmente */
+      max-width: 40%;           /* opzionale: controlla larghezza */
+    }
+  }
+
+
+
 </style>
 
 
@@ -649,17 +676,15 @@
             The Italian Physics Olympiad has been organized since 1987 by the Italian Association for the Teaching of Physics (AIF). Each year, two teams composed of the best Italian students are trained in preparation for the IPhO and EuPhO. In 2019, I joined the training courses organized by AIF as a trainer. After five years of collaboration, I earned a position on the national board that organizes the Olympiad. Our main tasks include designing theoretical and experimental problems for the various stages of the competition, evaluating contestants and coaching the two teams for the international competitions. Each year, roughly 30.000 high school students from all corners of Italy take part in the competition. The national finals take place in April in Senigallia, where there is also time to humiliate young contestants at beach soccer.
           </p>
           
-          <div class="image-container">
-            <img src="/files/committee.JPG" alt="committee" class="img-fluid img-rounded" style="margin-bottom: 20px; margin-top: -5px;">
-            <img src="/files/beachsoccer.jpg" alt="beachsoccer" class="img-fluid img-rounded" style="margin-bottom: 20px; margin-top: -5px;">
-          </div>
+<div class="custom-image-grid">
+  <img src="/files/committee.JPG" alt="committee" 
+       class="img-fluid img-rounded" style="margin-top:-5px;">
+  <img src="/files/beachsoccer.jpg" alt="beachsoccer" 
+       class="img-fluid img-rounded" style="margin-top:-5px;">
+  <img src="/files/italy.jpeg" alt="third" 
+       class="img-fluid img-rounded" style="margin-bottom:13px;">
+</div>
 
-          <!--
-          <div class="image-container" style="margin-bottom: 0px; margin-top: -35px;">
-            <img src="/files/All_SSC.JPG" alt="Aula" class="img-fluid img-rounded">
-            <img src="/files/beach.JPG" alt="Scalinata" class="img-fluid img-rounded">
-          </div>
-           -->
   
         </div>
       </div>
