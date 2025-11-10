@@ -206,6 +206,24 @@
     margin: 0px; /* rimuove margini verticali bianchi */
   }
 
+/* Reduce only the vertical spacing (simulate negative gap) for Olympiad images */
+.olympiad-images {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;   /* keep normal horizontal gap */
+  row-gap: 0;         /* no normal vertical gap */
+}
+
+.olympiad-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0px;
+  margin-top: 20px;  /* <-- negative vertical spacing */
+}
+
+
+
   /* Desktop: 2 colonne sopra + 1 immagine centrata sotto */
   @media (min-width: 768px) {
     .custom-image-grid {
@@ -220,12 +238,50 @@
   }
 
 
+/* Wider inner gap between the two columns on desktop only */
+@media (min-width: 992px) {
+  /* Left column: keep outer edge, widen inner edge */
+  .home-section .container .row > .col-12.col-lg-4 {
+    padding-left: 10px !important;
+    padding-right: 2rem !important;
+  }
+  /* Right column adjacent to the left one: widen inner edge, keep outer edge */
+  .home-section .container .row > .col-12.col-lg-4 + .col-12.col-lg-8 {
+    padding-left: 2rem !important;
+    padding-right: 4px !important;
+  }
+}
+
+/* TEMP: verification outlines — remove after checking */
+/*@media (min-width: 992px) {
+  .home-section .container .row > .col-12.col-lg-4 { outline: 1px dashed red; }
+  .home-section .container .row > .col-12.col-lg-4 + .col-12.col-lg-8 { outline: 1px dashed blue; }
+}*/
+
+/* Keep the 2×2 grid on phones too */
+@media (max-width: 768px) {
+  .image-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px; /* optional: slightly tighter gap on small screens */
+  }
+  .image-container img {
+    width: 100%;
+    height: auto;            /* keep natural height */
+    /* optional: enforce uniform tiles
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    */
+  }
+}
 
 </style>
 
 
 
   <title>Daniele Battesimo Provenzano</title>
+
+
+  
 
 </head>
 
@@ -684,19 +740,17 @@
           <a href="https://www.olifis.it/" style="color: royalblue;"><center>Italian Physics Olympiad</center> </a>
         </h3>
         <div class="article-style">
-          <p align="justify" style="margin-top: 15px;"> 
+          <p align="justify" style="margin-top: 15px; margin-bottom: -10px;"> 
             The Italian Physics Olympiad has been organized since 1987 by the Italian Association for the Teaching of Physics (AIF). Each year, two teams composed of the best Italian students are trained in preparation for the IPhO and EuPhO. In 2019, I joined the training courses organized by AIF as a trainer. After five years of collaboration, I earned a position on the national board that organizes the Olympiad. Our main tasks include designing theoretical and experimental problems for the various stages of the competition, evaluating contestants and coaching the two teams for the international competitions. Each year, roughly 30.000 high school students from all corners of Italy take part in the competition. The national finals take place in April in Senigallia, where there is also time to humiliate young contestants at beach soccer.
           </p>
-          
-<div class="custom-image-grid">
-  <img src="/files/committee.JPG" alt="committee" 
-       class="img-fluid img-rounded" style="margin-top:-5px;">
-  <img src="/files/beachsoccer.jpg" alt="beachsoccer" 
-       class="img-fluid img-rounded" style="margin-top:-5px;">
-  <img src="/files/italy.jpeg" alt="third" 
-       class="img-fluid img-rounded" style="margin-bottom:13px;">
-</div>
 
+
+       <div class="image-container olympiad-images" style="margin-bottom: 20px;">
+          <img src="/files/committee.JPG"  class="img-fluid img-rounded">
+          <img src="/files/beachsoccer.jpg"  class="img-fluid img-rounded">
+          <img src="/files/italy.jpeg"  class="img-fluid img-rounded">
+          <img src="/files/bubble.jpg"  class="img-fluid img-rounded">
+        </div>
   
         </div>
       </div>

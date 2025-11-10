@@ -1587,3 +1587,26 @@ body.dark {
   background: rgb(40, 42, 54);
   color: rgb(248, 248, 242);
 }
+
+/* === widen space between left/right columns on desktop === */
+@media (min-width: 992px) {
+  /* every .col-lg-4 gets extra right padding */
+  [class*="col-"].col-lg-4 {
+    padding-right: 3rem !important;
+  }
+
+  /* every .col-lg-8 that comes after any .col-lg-4 gets extra left padding */
+  [class*="col-"].col-lg-4 ~ [class*="col-"].col-lg-8 {
+    padding-left: 3rem !important;
+  }
+}
+
+/* TEMP: show outlines to verify */
+@media (min-width: 992px) {
+  [class*="col-"].col-lg-4 {
+    outline: 1px dashed red;
+  }
+  [class*="col-"].col-lg-4 ~ [class*="col-"].col-lg-8 {
+    outline: 1px dashed blue;
+  }
+}
