@@ -274,6 +274,143 @@
   }
 }
 
+
+/* Ambient: two cards per row on desktop, one per row on mobile */
+.ambient .ambient-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.09);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  padding: 15px;
+}
+
+/* Media inside the card */
+.ambient-card img,
+.ambient-card video,
+.ambient-card iframe {
+  display: block;
+  width: 100%;
+  height: auto;          /* keeps natural aspect ratio for img/video */
+  border-radius: 10px;
+  margin-top: 1px;      /* space above media */
+}
+
+/* Make iframes (YouTube, etc.) responsive */
+.ambient-card iframe {
+  aspect-ratio: 16 / 9;  /* modern browsers */
+  border: 0;
+}
+
+/* Optional: a small vertical rhythm */
+.ambient-card h3 { margin-top: 0; margin-bottom: .35rem; }
+.ambient-card p  { margin-bottom: .75rem; }
+
+/* Dark mode match */
+.dark .ambient .ambient-card {
+  background: rgb(40, 42, 54);
+  border-color: rgb(68, 71, 90);
+  box-shadow: 0 1px 4px rgba(255,255,255,.06);
+}
+
+
+/* Make both ambient boxes equal height per row */
+.ambient {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* keep horizontal and vertical spacing consistent */
+}
+
+.ambient > .col-12.col-lg-6 {
+  flex: 1 1 48%;   /* two roughly equal columns */
+  display: flex;   /* allow the inner card to stretch */
+}
+
+.ambient-card {
+  flex: 1;         /* fill available height */
+  display: flex;
+  flex-direction: column; /* so content flows top → bottom */
+}
+
+.ambient-card h3 {
+  text-align: center;
+}
+
+/* Make the two ambient boxes fill more horizontal space and reduce the gap */
+.ambient {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers the pair within the container */
+  gap: 0px;               /* controls space between boxes */
+}
+
+.ambient > .col-12.col-lg-6 {
+  flex: 1 1 50%;           /* each box about 48% of row width */
+  display: flex;           /* makes inner card stretch evenly */
+  min-width: 300px;        /* optional safeguard for narrow screens */
+}
+
+.ambient-card {
+  flex: 1;
+}
+
+/* 2×2 media grid — all cells aligned and equal height */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+/* Each cell behaves like a uniform tile */
+.media-grid > * {
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* same proportions for all cells */
+  object-fit: cover;      /* images fill the tile without distortion */
+  display: block;
+  border-radius: 8px;
+}
+
+/* Specific rule for the iframe (video) */
+.media-grid iframe {
+  height: 100%;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+
+/* Media grid: keep natural ratios, align tops, kill inherited margins */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: start;           /* align items to the top of each row */
+  justify-items: stretch;
+}
+
+.article-style .media-grid img,
+.article-style .media-grid video,
+.article-style .media-grid iframe {
+  display: block;
+  width: 100%;
+  height: auto;                  /* preserve natural aspect ratios */
+  margin: 0 !important;          /* override the 60px margins */
+  border: 0;
+}
+
+/* Optional: ensure the iframe stays responsive at 16:9 */
+.article-style .media-grid iframe {
+  aspect-ratio: 16 / 9;
+}
+
+/* Increase vertical space between ambient boxes only on small screens */
+@media (max-width: 768px) {
+  .ambient {
+    row-gap: 20px !important;   /* space between stacked boxes */
+  }
+}
+
 </style>
 
 
@@ -478,32 +615,72 @@
    
           </div>
 
-               </div>
+        </div>
 
      <div class="col-12 col-lg-8">
   
 
-       <p align="justify">  &nbsp;&nbsp;  Currently, in addition to my Ph.D. research, I am working on four projects in two fields that I particularly love: celestial mechanics and fluid dynamics. As for the latter, you can check this <a href="https://doi.org/10.1119/5.0254263" target="_blank">paper</a> about unblowing soap bubbles. It served as the theoretical basis for the final experimental examination of the 2025 Italian Physics Olympiad.</p>
+       <p align="justify">  &nbsp;&nbsp;  Currently, in addition to my Ph.D. research, I am working on some projects in two fields that I particularly love: celestial mechanics and fluid dynamics. As for the latter, you can check this <a href="https://doi.org/10.1119/5.0254263" target="_blank">paper</a> about daflating soap bubbles. It served as the theoretical basis for the final experimental examination of the 2025 Italian Physics Olympiad.</p>
 
-
-          <figure>
-          <video class="responsive-video" controls>
-            <source src="/files/DeflatingBubble.mp4" type="video/mp4">
-          </video>
-          <figcaption class="caption-wider">
-            This is a simulation illustrating the deflation process of a soap bubble through a cylindrical straw, for three different values of the straw's length. The simulation was created by my lifelong friend 
-            <a href="https://acilione.github.io/" target="_blank">Antonino Cilione</a>.
-          </figcaption>
-        </figure>
-
-        <p align="justify">  &nbsp;&nbsp; The other works in fluid dynamics focus on debunking fake perpetual motion machines, such as <a href="https://www.youtube.com/shorts/sNBBL4ByoSo" target="_blank">this one</a>, as well as on producing a comprehensive review/tutorial on Bernoulli’s equation in all its forms, with particular emphasis on common misconceptions. I recently realized that this topic is often poorly addressed in many textbooks and, above all, by the majority of teachers both at school and at university. For this reason, I started writing a proper guide on the subject… turbulence, despite its fascination, remains the worst enemy! I also presented a short preview of this work at the GIREP-EPEC conference in Leiden: <a href="/files/Bernoulli's Misconceptions.pdf" target="_blank">here</a> are the slides (I recommend using Adobe Acrobat for the magnus effect animation).
+        <p align="justify">  &nbsp;&nbsp; The other works in fluid dynamics focus on debunking fake perpetual motion machines—such as <a href="https://www.youtube.com/shorts/sNBBL4ByoSo" target="_blank">this one</a>—on quantitatively describing how a Heron’s Fountain works, and on producing a comprehensive review/tutorial on Bernoulli’s equation in all its forms, with particular emphasis on common misconceptions. I recently realized that this topic is often poorly addressed in many textbooks and, above all, by the majority of teachers both at school and at university. For this reason, I am writing a proper guide on the subject… turbulence, despite its fascination, remains the toughest enemy! I also presented a short preview of this work at the GIREP-EPEC conference in Leiden: <a href="/files/Bernoulli's Misconceptions.pdf" target="_blank">here</a> are the slides (I recommend using Adobe Acrobat for the magnus effect animation).
         </p>
 
-          <p align="justify">  &nbsp;&nbsp; As for celestial mechanics, I am modeling the dynamics of binary star systems (which exchange mass with each other) using simple ODEs and generalizing some results obtained by Sir James Jeans a century ago. Finally, still within the realm of motions in central fields, I am attempting to prove a beautiful property of the following orbits, each corresponding to the force field $\vec{f} \propto - \,r^{-n}\,\hat{r}$:</p>
+              <div class="row ambient">
 
-            <div style="display: flex; justify-content: center; margin-bottom: 20px; margin-top: -8px;">
-              <img src="/files/orbits.png" alt="" width="500" height="288">
-              </div>
+                    <!-- Left box -->
+                    <div class="col-12 col-lg-6">
+                      <div class="ambient-card">
+                        <h3>Deflating bubbles</h3>
+                        <p align="justify">
+                      This simulation illustrates the deflation process of a soap bubble through a cylindrical straw, considering three different straw lengths. The animation was created by my lifelong friend <a href="https://acilione.github.io/" target="_blank">Antonino Cilione</a> and is based on my results in <a href="https://www.youtube.com/shorts/sNBBL4ByoSo" target="_blank">this paper</a>.
+                        </p>
+                        <video class="responsive-video" controls>
+                          <source src="/files/DeflatingBubble.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+
+                    <!-- Right box -->
+                    <div class="col-12 col-lg-6">
+                      <div class="ambient-card">
+                        <h3>Heron's fountain</h3>
+                        <p align="justify">
+                         This video shows the operation of a HF that I built this summer, which is the subject of a article I am writing. As soon as the top cap is removed, the liquid flows downward, increasing the pressure in the lower container and causing the fluid to rise in the right-hand tube.
+                        </p>
+                        <video class="responsive-video" controls>
+                          <source src="/files/Heron_fountain.mp4" type="video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+          <br>
+
+          <p align="justify">  &nbsp;&nbsp; As for celestial mechanics, I am modeling the dynamics of binary star systems (which exchange mass with each other) using simple ODEs and generalizing some results obtained by Sir James Jeans a century ago. Finally, still within the realm of motions in central fields, I am attempting to prove a beautiful property of the following orbits, each corresponding to the force field $\vec{f} \propto - \,r^{-n}\,\hat{r}$.</p>
+
+
+              <div class="row ambient">
+
+                    <!-- Left box -->
+                    <div class="col-12 col-lg-6">
+                      <div class="ambient-card">
+                        <h3>Binary system</h3>
+                         <img src="/files/orbits.gif" alt="Animated GIF">
+                      </div>
+                    </div>
+
+                    <!-- Right box -->
+                    <div class="col-12 col-lg-6">
+                      <div class="ambient-card">
+                        <h3>Wonderful orbits</h3>
+
+                        <img src="/files/orbits.png" alt="" width="500" height="288">
+                      </div>
+                    </div>
+                  </div>
+
+
+
 
            </div>
          </div>
@@ -786,12 +963,12 @@
 
       <div class="card-simple">
         <h3 class="article-title mb-1 mt-3">
-          <center>Training Camp for the Physics Olympiad</center>
+          <center>Training Camp for the Physics Olympiad in Catania</center>
         </h3>
         
         <div class="article-style">
           <p align="justify" style="margin-top: 15px; margin-bottom: 15px;"> 
-            Since 2019, students from the Scuola Superiore di Catania have been organizing a physics training camp for students from southern Italy who qualify for the national stage of the Physics Olympiad. The camp features theoretical lessons, problem-solving sessions, hands-on experiments and a final competition. I joined the organizing team in 2023, forging great friendships with the young physicists from Catania.
+            Since 2019, students from Scuola Superiore di Catania have been organizing a physics training camp for students from southern Italy who qualify for the national stage of the Physics Olympiad. The camp features theoretical lessons, problem-solving sessions, hands-on experiments and a final competition. I joined the organizing team in 2023, forging great friendships with the young physicists from Catania.
           </p>
         </div>
 
@@ -816,9 +993,26 @@
             In 2023, after four years of preparation, my university colleagues and I gave birth to the first-ever Team Physics Competition, an annual event consisting of several stages held all across Italy and aimed at high school students. Every year, approximately 600 teams from all corners of Italy participate in the competition. The top 20 teams receive an invitation to the national finals, where the competition unfolds in person, resembling a sporting event. Here is the time-lapse of the 2024 final, can you spot the Easter egg?
           </p>
           
-          <div class="video-container">
-            <iframe width="500" height="281" src="https://www.youtube.com/embed/lDx7oTnbz4E?si=DpDSFaIC6OdFhMxC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+            <div class="media-grid" style="margin-bottom: 12px;">
+              <!-- (1,1) Video -->
+              <iframe
+                src="https://www.youtube.com/embed/lDx7oTnbz4E?si=DpDSFaIC6OdFhMxC"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
+
+              <!-- (1,2) Image -->
+              <img src="/files/2024.JPG" alt="Organizing committee">
+
+              <!-- (2,1) Image -->
+              <img src="/files/2025.JPG" alt="Beach soccer at finals">
+
+              <!-- (2,2) Image -->
+              <img src="/files/2023.JPG" alt="Teams across Italy">
+            </div>
+
 
           <p align="justify" style="margin-top: 15px;">
             Here is a funny problem I created for the 2025 contest: <i> "Captain Hector Barbossa has a special spyglass made up of two thin converging lenses aligned along the same axis. The peculiarity of his instrument is that the magnification does not depend on the distance from the observed object. If the two lenses are separated by 11 cm and the focal length of the lens closest to the eyes is 1.8 cm, what is the angular magnification of the spyglass?"</i>
@@ -974,14 +1168,13 @@
 
         <li><p align="justify">During university, I developed interests beyond Physics and teaching. Inspired by Monty Python's cheerful insanity, I discovered a passion for creating and editing absurd short films. You can find a couple on my <a href="https://www.youtube.com/@DanieleBattesimoProvenzano" target="_blank">YouTube channel</a>. I have many more ideas that never came to life—the main challenge being that my friends are not willing to act!</p></li>
 
-      <div style="text-align: center;">
+      <div style="text-align: center; margin-bottom: 10px;">
         <iframe width="330" height="210" src="https://www.youtube.com/embed/HePARFeWX_w?si=evp7goKzHbxF6aqV" 
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
       </div>
-      <br>
-
+   
       <li> <p align="justify">When it comes to music, my favourite composers are Ennio Morricone, Brian Wilson, Ray Davies and Masayoshi Takanaka. During the pandemic, I discovered the fascinating world of Progressive Rock. Since then, I have become a huge admirer of bands like Yes, Caravan, King Crimson, early Genesis, RTF and VDGG. I enjoy playing their songs on the bass guitar, even though some are still too challenging. Here’s a list of my favorite music albums (not just prog), roughly in order.</p>
 
        <div style="display: flex; justify-content: center;">
